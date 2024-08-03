@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Sonatawatchstore</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <!-- JavaScript for Inactivity -->
+  <script>
+    // JavaScript to handle user inactivity and change styles
+
+    let inactivityTime = function () {
+        let time;
+        const timeout = 5000; // 5 seconds
+
+        // Reset timer on events
+        window.onload = resetTimer;
+        document.onmousemove = resetTimer;
+        document.onkeypress = resetTimer;
+
+        function changeStyle() {
+            document.getElementById("title").style.backgroundColor = "#000000"; // Change background color
+            document.getElementById("title").style.fontSize = "2rem"; // Change font size
+        }
+
+        function revertStyle() {
+            document.getElementById("title").style.backgroundColor = "#1e63d2"; // Revert background color
+            document.getElementById("title").style.fontSize = "1rem"; // Revert font size
+        }
+
+        function resetTimer() {
+            clearTimeout(time);
+            revertStyle();
+            time = setTimeout(changeStyle, timeout);
+        }
+    };
+
+    window.onload = function () {
+        inactivityTime();
+    };
+  </script>
+</head>
+
+<body>
+
+  <section class="colored-section" id="title">
+
+    <div class="container-fluid">
+
+      <!-- Nav Bar -->
+
+      <nav class="navbar navbar-expand-lg navbar-dark">
+
+        <a class="navbar-brand" href="">Sonata</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#pricing">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Download">Download</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Men">Men</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Women">Women</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Offer">Offer</a>
+            </li>
+          </ul>
+
+        </div>
+      </nav>
+
+ 
+      <!-- Title -->
+
+      <div class="row">
+
+        <div class="col-lg-6">
+          <h1 class="section-heading ">Discover the timeless elegance and unparalleled craftsmanship of the world’s most iconic watches.</h1>
+          <button type="button" class="btn btn-dark btn-lg download-button"><i class="fab fa-apple"></i> Download</button>
+          <button type="button" class="btn btn-outline-light btn-lg download-button"><i class="fab fa-google-play"></i> Download</button>
+        </div>
+
+        <div class="col-lg-6">
+          <img class="title-image" src="images/sonat.jpeg" alt="watches-mockup">
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+  
+  <!-- Footer -->
+<footer class="white-section" id="footer">
+    <div class="container-fluid">
+      <i class="social-icon fab fa-facebook-f"></i>
+      <i class="social-icon fab fa-twitter"></i>
+      <i class="social-icon fab fa-instagram"></i>
+      <i class="social-icon fas fa-envelope"></i>
+      <p>© Copyright 1966 Sonata</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
