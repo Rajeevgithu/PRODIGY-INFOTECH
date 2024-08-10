@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #548687;
+    color: #ffffff;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 2.5rem;
+    color: #e1f1dd;
+}
+
+.container {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game {
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+}
+
+.box {
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    font-size: 8vmin;
+    color: #b0413e;
+    background-color: #ffffc7;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.box:hover {
+    transform: scale(1.1);
+    background-color: #ffeb99;
+}
+
+.controls-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #394867;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.difficulty {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #334756;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-family: 'Verdana', sans-serif;
+    font-weight: bold;
+}
+
+#reset-btn {
+    background-color: #ff6363;
+    color: #fff;
+}
+
+#reset-btn:hover {
+    background-color: #e94e4e;
+    transform: scale(1.05);
+}
+
+#new-btn {
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: #191913;
+    color: #fff;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#new-btn:hover {
+    background-color: #282828;
+    transform: scale(1.05);
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+label {
+    color: #e1f1dd;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.difficulty-button {
+    background-color: #3a6ea5;
+    color: #fff;
+}
+
+.difficulty-button:hover {
+    background-color: #315e8b;
+    transform: scale(1.05);
+}
+
+#easyButton {
+    background-color: #63a4ff;
+}
+
+#easyButton:hover {
+    background-color: #5a94e1;
+}
+
+#mediumButton {
+    background-color: #ffb563;
+}
+
+#mediumButton:hover {
+    background-color: #e89e57;
+}
+
+#hardButton {
+    background-color: #ff6363;
+}
+
+#hardButton:hover {
+    background-color: #e94e4e;
+}
+
+#msg {
+    color: #e0e0e0;
+    font-size: 2rem;
+}
+
+.msg-container {
+    height: 100vmin;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+}
+
+.hide {
+    display: none;
+}
+
+button:focus {
+    outline: none;
+}
